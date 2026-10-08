@@ -12,11 +12,11 @@
 script = ExtResource("1_6sh32")
 
 [node name="ItemMaker_Gear" parent="." unique_id=330723769 instance=ExtResource("2_ejswk")]
-position = Vector2(379, 308)
+position = Vector2(127, 263)
 item_scene = ExtResource("3_bbk5w")
 
 [node name="Machine" parent="." unique_id=1009840541 instance=ExtResource("4_conm7")]
-position = Vector2(832, 332)
+position = Vector2(870, 576)
 
 [node name="Player" parent="." unique_id=2124530917 instance=ExtResource("5_d3jkd")]
 position = Vector2(496, 419)

@@ -11,7 +11,7 @@ signal player_hit
 # Movement
 # =========================
 
-@export var move_speed: float = 150.0
+@export var move_speed: float = 100.0
 
 
 # =========================
@@ -51,18 +51,10 @@ func chase_target() -> void:
 	velocity = direction * move_speed
 
 	move_and_slide()
-	
-	check_player_collision()
-	
-# =========================
-# Collision
-# =========================
 
-func check_player_collision() -> void:
-	for i in get_slide_collision_count():
-		var collision := get_slide_collision(i)
-		var body := collision.get_collider()
-
-		if body == target:
-			player_hit.emit()
-			return
+# ========================= 
+# Player Detection 
+# =========================
+func _on_hit_area_body_entered(body: Node2D) -> void: 
+	if body.is_in_group("player"): 
+		player_hit.emit()

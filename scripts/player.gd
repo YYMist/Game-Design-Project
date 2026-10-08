@@ -6,7 +6,7 @@ extends CharacterBody2D
 # Movement
 # =========================
 
-@export var move_speed: float = 1000.0
+@export var move_speed: float = 300.0
 
 
 # =========================

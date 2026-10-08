@@ -15,10 +15,10 @@ extends Node2D
 # =========================
 
 @export var min_break_time: float = 2.0
-@export var max_break_time: float = 4.0
-@export var repair_deadline: float = 3.0
+@export var max_break_time: float = 5.0
+@export var repair_deadline: float = 15.0
 
-var max_repairs: int = 1
+var max_repairs: int = 2
 
 
 # =========================

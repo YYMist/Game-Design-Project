@@ -73,7 +73,17 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 # =========================
 
 func update_prompt() -> void:
-	pass
+	label.visible = true
+
+	match state:
+		State.IDLE:
+			label.text = "ENTER：製造零件"
+
+		State.MAKING:
+			label.text = "製造中..."
+
+		State.ITEM_READY:
+			label.text = "零件已完成"
 
 
 # =========================

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://qihg70lcpv6b" path="res://scripts/item.gd" id="1_tnite"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b764d"]
-size = Vector2(18, 15)
+size = Vector2(71, 65)
 
 [node name="Item" type="Area2D" unique_id=2131852903]
 script = ExtResource("1_tnite")
@@ -11,7 +11,7 @@ script = ExtResource("1_tnite")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1954200979]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1601391074]
-position = Vector2(0, -0.5)
+position = Vector2(1.5, -0.5)
 shape = SubResource("RectangleShape2D_b764d")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1597765013]

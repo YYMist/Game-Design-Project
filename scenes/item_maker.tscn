@@ -29,8 +29,10 @@ position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_i2efx")
 
 [node name="Label" type="Label" parent="." unique_id=880454900]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -17.0
+offset_top = -74.0
+offset_right = 23.0
+offset_bottom = -51.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="." unique_id=463851226]

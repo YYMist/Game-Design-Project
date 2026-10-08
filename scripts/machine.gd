@@ -60,11 +60,11 @@ func _process(_delta: float) -> void:
 
 func update_prompt() -> void:
 	if state != State.BROKEN:
+		time_label.visible = false
 		return
 	
 	time_label.visible = true
 	
-
 	match state:
 		State.WORKING:
 			time_label.text = ""
