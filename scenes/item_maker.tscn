@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://demdtje0jnd33"]
+
+[ext_resource type="Script" uid="uid://b6k5j7ej5q4xw" path="res://scripts/item_maker.gd" id="1_b764d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iak62"]
+size = Vector2(24, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2efx"]
+size = Vector2(66, 100)
+
+[node name="ItemMaker" type="Area2D" unique_id=330723769]
+position = Vector2(137, 82)
+script = ExtResource("1_b764d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1513526314]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=872568945]
+position = Vector2(2, -1.5)
+shape = SubResource("RectangleShape2D_iak62")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=2119379833]
+position = Vector2(111, 8)
+polygon = PackedVector2Array(-123, -39, -123, 18, -97, 18, -97, -39)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=644765447]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=735451999]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_i2efx")
+
+[node name="Label" type="Label" parent="." unique_id=880454900]
+offset_right = 40.0
+offset_bottom = 23.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="." unique_id=463851226]
+one_shot = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

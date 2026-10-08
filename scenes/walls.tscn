@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c602yd1b501hu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2efx"]
+size = Vector2(1020.5, 125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iak62"]
+size = Vector2(151, 675)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgb0q"]
+size = Vector2(1124, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hluo"]
+size = Vector2(152.5, 682)
+
+[node name="Walls" type="Node2D" unique_id=1572522865]
+
+[node name="TopWall" type="StaticBody2D" parent="." unique_id=17641574]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopWall" unique_id=1508405300]
+position = Vector2(581.5, 61.5)
+shape = SubResource("RectangleShape2D_i2efx")
+
+[node name="LeftWall" type="StaticBody2D" parent="." unique_id=180329387]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=844745783]
+position = Vector2(65.5, 327.5)
+shape = SubResource("RectangleShape2D_iak62")
+
+[node name="ButtomWall" type="StaticBody2D" parent="." unique_id=508856727]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtomWall" unique_id=2028875668]
+position = Vector2(617, 589)
+shape = SubResource("RectangleShape2D_tgb0q")
+
+[node name="RightWall" type="StaticBody2D" parent="." unique_id=127446119]
+position = Vector2(3, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall" unique_id=1368134540]
+position = Vector2(1105.25, 331)
+shape = SubResource("RectangleShape2D_7hluo")

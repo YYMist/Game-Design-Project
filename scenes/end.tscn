@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://66uboxorhmdu"]
+
+[ext_resource type="Script" uid="uid://drwf83s4yodyf" path="res://scripts/end.gd" id="1_mwn6m"]
+
+[node name="End" type="Control" unique_id=1735839927]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_mwn6m")
+
+[node name="Title" type="Label" parent="." unique_id=1634457057]
+layout_mode = 0
+offset_left = 518.0
+offset_top = 201.0
+offset_right = 610.0
+offset_bottom = 224.0
+text = "GAME OVER"
+
+[node name="RetryButton" type="Button" parent="." unique_id=1598122677]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 450.0
+offset_right = 613.0
+offset_bottom = 481.0
+text = "PLAY AGAIN"
+
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]

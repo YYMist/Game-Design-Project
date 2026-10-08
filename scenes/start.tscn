@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bi62psn1t6wlk"]
+
+[ext_resource type="Script" uid="uid://byjvf8odeeerl" path="res://scripts/start.gd" id="1_jaeev"]
+
+[node name="Start" type="Control" unique_id=1003895184]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_jaeev")
+
+[node name="Title" type="Label" parent="." unique_id=108609600]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 169.0
+offset_right = 684.0
+offset_bottom = 313.0
+text = "AWARIA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="." unique_id=1295769793]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 427.0
+offset_right = 620.0
+offset_bottom = 530.0
+text = "START"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
